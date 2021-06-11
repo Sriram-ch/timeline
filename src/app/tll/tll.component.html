@@ -1,0 +1,54 @@
+<body>
+<div class="timeline">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-12">
+              <div class="timeline-container" *ngFor="let entry of entries; let i = index" >
+                  <div class="timeline-end" *ngIf="(entry.main != '')">
+                      <p style="text-transform: uppercase;">{{entry.main}}</p>
+                  </div>
+                  <div class="timeline-continue" *ngIf="(entry.main == '')">
+                    <div class="row timeline-right" *ngIf="i % 2 == 0">
+                      <div class="col-md-6">
+                          <p class="timeline-date">
+                             {{entry.date}}
+                          </p>
+                      </div>
+                      <div class="col-md-6">
+                          <div class="timeline-box">
+                              <div class="timeline-text">
+                                  <h3>{{entry.heading}}</h3>
+                                  <p>{{entry.content}}</p>
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+
+                    <div class="row timeline-left" *ngIf="i % 2 != 0">
+                      <div class="col-md-6 d-md-none d-block">
+                          <p class="timeline-date">
+                              {{entry.date}}
+                          </p>
+                      </div>
+                      <div class="col-md-6">
+                          <div class="timeline-box">
+                              <div class="timeline-text">
+                                  <h3>{{entry.heading}}</h3>
+                                  <p>{{entry.content}}</p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-md-6 d-md-block d-none">
+                          <p class="timeline-date">
+                              {{entry.date}}
+                          </p>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+</body>
+<router-outlet></router-outlet>
