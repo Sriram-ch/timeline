@@ -1,0 +1,43 @@
+
+.part1 {background-color:#fff; 
+    width: 48%;
+    height:50%; 
+    float:left;
+    margin:10px;
+    box-shadow: 1px 2px 2px 1px #aaaaaa;
+
+}
+
+.part2 {background-color:white; 
+    width: 48%;
+    height:50%; 
+    float:left;
+    margin:10px;
+    box-shadow: 1px 2px 2px 1px #aaaaaa;
+}
+
+.part3 {background-color:white; 
+    width: 48%;
+    height:50%; 
+    float:left;
+    margin:10px;
+    box-shadow: 1px 2px 2px 1px #aaaaaa;
+}    
+
+.part4 {background-color:white; 
+    width: 48%;
+    height:50%; 
+    float:left;
+    margin:10px;
+    box-shadow: 1px 2px 2px 1px #aaaaaa;
+}
+
+.table {
+    padding:2vh;
+    display:flex;
+    justify-content: flex-start;
+}
+table.test {
+    border-collapse: separate;
+    border-spacing: 5px;
+}

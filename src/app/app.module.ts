@@ -16,6 +16,8 @@ import { NgVerticalTimelineModule } from 'ng-vertical-timeline';
 import { MglTimelineModule } from 'angular-mgl-timeline';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TllComponent } from './tll/tll.component';
+import { WipComponent } from './wip/wip.component';
+import { HighchartsChartComponent, HighchartsChartModule} from 'highcharts-angular';
 
 
 
@@ -25,7 +27,8 @@ import { TllComponent } from './tll/tll.component';
     HeaderComponent,
     FooterComponent,
     TimelineComponent,
-    TllComponent
+    TllComponent,
+    WipComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +37,8 @@ import { TllComponent } from './tll/tll.component';
     NgbModule,
     NgVerticalTimelineModule,
     BrowserAnimationsModule,
-    MglTimelineModule
+    MglTimelineModule,
+    HighchartsChartModule
   ],
   providers: [],
   bootstrap: [AppComponent]

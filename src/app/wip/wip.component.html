@@ -1,0 +1,106 @@
+<div class="container-fluid"
+    style="background-color: #fff;height: 100%;width:100%;padding: 0;overflow-y: hidden;overflow-x:hidden;">
+    <app-header></app-header>
+    <br>
+    <br>
+
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+
+                <fa-icon [icon]="['fas', 'home']" size="md" [fixedWidth]="true" style="color:#004A7F;cursor: pointer;">
+                </fa-icon>
+
+            <li class="breadcrumb-item" aria-current="page" style="font-weight: 500;color: black;">
+                WIP Inv </li>
+
+
+            <li class="navbar-nav ml-auto" style="margin-bottom:-1rem">
+                <div class="row">
+                    <div style=" border-radius: .25rem;margin-right:8px;">
+                        <fa-icon [icon]="['fas', 'cog']" size="lg" [fixedWidth]="true" style="color:#ED7D31;">
+                        </fa-icon>&nbsp;
+                    </div>
+                </div>
+            </li>
+        </ol>
+    </nav>
+    <div style="overflow: auto;height:75vh;width:(100% - 20px);margin-left:10px;margin-right: 10px;box-shadow: 1px 2px 3px 2px #aaaaaa;">
+        <div class=" part1">
+            <div style="background-color: #fff;width:95%;height:95%;margin-left:15px;margin-top:5px">
+                <div>
+                    <p style="padding-left: 5px;font-weight:500;">WIP LEVEL BY SITE</p>
+                </div>
+                <div style="align-items: center;height:90%">
+                    <highcharts-chart id="barChart1"
+                        [Highcharts] = "highcharts" 
+                        [options] = "barOptions1" 
+                        style = "height:inherit; display: block;">
+                    </highcharts-chart>
+                </div>
+                
+            </div>
+        </div>
+        <div class=" part2">
+            <div style="background-color: #fff;width:95%;height:95%;margin-left:15px;margin-top:5px">
+                <div>
+                    <p style="padding-left: 5px;font-weight:500;">WIP LEVEL (EUR) BY SITE</p>
+                </div>
+                <div style="align-items: center;height:90%">
+                    <highcharts-chart id="barChart2"
+                        [Highcharts] = "highcharts" 
+                        [options] = "barOptions2" 
+                        style = "height:inherit; display: block;">
+                    </highcharts-chart>
+                </div>
+            </div>
+        </div>
+        <div class="part3">
+            <div style="background-color: #fff;width:95%;height:95%;margin-left:15px;margin-top:5px">
+                <div>
+                    <p style="padding-left: 5px;font-weight:500;">TOP 10 INTERMEDIATE PRODUCTS</p>
+                </div>
+                <div style="align-items: center;height:90%">
+                    <highcharts-chart id="barChart3"
+                        [Highcharts] = "highcharts" 
+                        [options] = "barOptions3" 
+                        style = "height:inherit; display: block;">
+                    </highcharts-chart>
+                </div>
+            </div>
+        </div>
+        <div class="part4">
+            <div style="background-color: #fff;width:95%;height:95%;margin-left:15px;margin-top:5px">
+                <div>
+                    <p style="padding-left: 5px;font-weight:500;">WIP BOTTLENECKS</p>
+                </div>
+                <div style="align-items: center;height:90%">
+                    <highcharts-chart id="pieChart"
+                        [Highcharts] = "highcharts" 
+                        [options] = "pieOptions" 
+                        style = "height:inherit; display: block;">
+                    </highcharts-chart>
+                </div>
+                
+            </div>
+        </div>
+        <br>
+        <div class="table">
+            <table class="test">
+                <thead>
+                    <tr>
+                        <th *ngFor="let header of headers" style="border:none;background-color:transparent;">{{ header }}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let data of table">
+                        <th style="background-color:#f5f5f5">{{data.header}}</th>
+                        <td *ngFor="let item of data.values" [ngStyle]="{'background-color':item == '5860kg' ? '#FF9394' : '#f5f5f5' }">{{item}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <app-footer></app-footer>
+    <router-outlet></router-outlet>
+</div>
