@@ -1,0 +1,16 @@
+<div *ngFor="let data of data">
+    <div class="center">
+        <div class="card">
+            <div class="header"[style.background-color]="data.color">
+                <h5 class="header-key">{{data.name}}</h5>
+                <h5 class="header-value">{{data.IP}}</h5>
+            </div>
+            <div class="body" *ngFor="let value of data.values">
+                <div class="content">
+                    <p class="key">{{value.key}}</p>
+                    <p class="value">{{value.value}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -18,6 +18,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TllComponent } from './tll/tll.component';
 import { WipComponent } from './wip/wip.component';
 import { HighchartsChartComponent, HighchartsChartModule} from 'highcharts-angular';
+import { WorkInProgressComponent } from './work-in-progress/work-in-progress.component';
+import { WIPBaseComponent } from './wip-base/wip-base.component';
+import { MatCardModule } from '@angular/material/card'; 
 
 
 
@@ -28,7 +31,9 @@ import { HighchartsChartComponent, HighchartsChartModule} from 'highcharts-angul
     FooterComponent,
     TimelineComponent,
     TllComponent,
-    WipComponent
+    WipComponent,
+    WorkInProgressComponent,
+    WIPBaseComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +43,8 @@ import { HighchartsChartComponent, HighchartsChartModule} from 'highcharts-angul
     NgVerticalTimelineModule,
     BrowserAnimationsModule,
     MglTimelineModule,
-    HighchartsChartModule
+    HighchartsChartModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
